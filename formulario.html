@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Avaliação Física</h1>
+    </header>
+    <section>
+        <div class="tel-sex-nome">
+            <input id="nome" type="text" placeholder="Nome" required>
+            <input type="tel" maxlength="9" placeholder="Telefone" required>
+            <p id="genero">
+                <strong>Gênero:</strong>
+                <input id="masculino" type="radio" name="sexo">
+                <label for="maculino">Maculino</label>
+                <input id="feminino" type="radio" name="sexo">
+                <label for="feminino">feminino</label>
+                <input id="outro" type="radio" name="sexo">
+                <label for="outro">Outro</label>
+            </p>
+        </div>
+        
+        <hr>
+        
+        <h2>Medidas Corporais (cm)</h2>
+        <div class="medidas-corpo">
+            <div class="medidas-1a10">
+                <input type="number" placeholder="Torax" required size="10">
+                <input type="number" placeholder="Cintura" required>
+                <input type="number" placeholder="Quadril" required>
+                <input type="number" placeholder="Centro costas" required>
+                <input type="number" placeholder="Centro frente" required>
+                <input type="number" placeholder="Largura do ombro" required>
+                <input type="number" placeholder="Altura frente" required>
+                <input type="number" placeholder="Altura costas" required>
+                <input type="number" placeholder="Pescoço" required>
+                <input type="number" placeholder="Entre cavas frente" required>
+            </div>
+
+            <div class="medidas-10a20">
+                <input type="number" placeholder="Entre cavas costas" required>
+                <input type="number" placeholder="Transversal frente" required>
+                <input type="number" placeholder="Transversal costas" required>
+                <input type="number" placeholder="Ombro" required>
+                <input type="number" placeholder="Gancho" required>
+                <input type="number" placeholder="Cumprimento calça" required>
+                <input type="number" placeholder="Boca alça" required>
+                <input type="number" placeholder="Largura braço" required>
+                <input type="number" placeholder="Cumprimento braço" required>
+                <input type="number" placeholder="Punho" required>
+            </div>
+            
+            <img class="imagem" src="manequin.png" alt="imagem ilustrativa">
+        </div>
+
+        
+<!--  ------------------------------------imc---------------------------------------------------------------------------------- -->
+        <div class="imc">
+            <p id="imc-titulo">IMC</p>
+            <div class="peso-altura">
+                <input id="peso" type="number" placeholder="Peso kg" size="30px">
+                <input id="altura" type="number" placeholder="Altura m" size="30px">
+            </div>
+            
+            <button onclick="calcular()">Calcular</button>
+            <div id="resultado">Valor do seu IMC</div>                            
+        </div>
+    
+        <div onclick="enviar()" class="botao-enviar">
+            <p>Enviar ficha</p>
+        </div>
+    </section>
+<!-- -----------------------------------rodapé---------------------------------------------------- -->
+    <footer>
+        <div class="rodape">
+            <img src="img/logo.png" alt="logo da academia" width="100px">
+            <p>Todos os direitos reservados - 2022</p>
+            <p>&reg;Academia thletic Fitness</p>
+            <hr>
+            <div id="cabeçalho">
+                <ul id="contatosrodape">
+                    <li><a href="https://wa.me/message/ULLHGLD7FJ7ZB1" target="_blank">Telefone</a></li>
+                    <li><a href="https://www.instagram.com/athleticfitness.a" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.google.com.br/maps/place/R.+Sete+de+Abril,+12+-+Alvorada+2,+Manaus+-+AM,+69042-210/@-3.0794437,-60.0524169,17z/data=!3m1!4b1!4m5!3m4!1s0x926c10428fb50355:0xad94e41b6ef1cfc4!8m2!3d-3.0794491!4d-60.049842" target="_blank">Localização</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+    
+    
+    <script src="script.js"></script>   
+</body>
+</html>
